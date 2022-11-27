@@ -78,8 +78,8 @@ class FreiHAND(Dataset):
         heatmaps = vector_to_heatmaps(keypoints)
         keypoints = torch.from_numpy(keypoints)
         heatmaps = torch.from_numpy(np.float32(heatmaps))
-        print(image.shape)
-        print(keypoints.shape)
+        # print(image.shape)
+        # print(keypoints.shape)
         return {
             "image": image,
             "keypoints": np.float32(keypoints.flatten()),

@@ -58,7 +58,7 @@ class ShallowUNet(nn.Module):
         # )
         # print("hello1")
         self.model_res = models.resnet50(pretrained=True)
-        self.model_res.fc = nn.Linear(512,out_channel*2)
+        self.model_res.fc = nn.Linear(2048,out_channel*2)
 
 
     def forward(self, x):
